@@ -1,9 +1,7 @@
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class PhoneBook {
-
-
     static int bookScore = 0;
     private static String phoneNumber;
 
@@ -18,6 +16,8 @@ public class PhoneBook {
             if (!isCorrectName) System.out.println("Введите корректное имя!");
         }
 
+
+
         boolean isCorrectNumber = false;
         while (!isCorrectNumber) {
             System.out.println("Введите нормер телефона");
@@ -25,7 +25,6 @@ public class PhoneBook {
             isCorrectNumber = checkPhoneNumber(phoneNumber);
             if (!isCorrectNumber) System.out.println("Введите корректный номер!");
         }
-
 
     }
     public static boolean checkPhoneNumber(String phoneNumber) {
@@ -60,9 +59,10 @@ public class PhoneBook {
         String str =  "";
         for (String[] strings : book) {
             for (String string : strings) {
-                System.out.println(string);
+                str += string;
             }
-
+            System.out.println(str);
+            str = "";
         }
 
     }
